@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="200dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Judul"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/kategori"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/light"
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:text="Kategori"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pertanyaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Pertanyaan"
+                android:textSize="18sp" />
+
+
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/waktu"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12-12-2019"/>
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/progress_tanggapan"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="200dp" />
+
+            <include
+                android:visibility="gone"
+                layout="@layout/layout_kosong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:visibility="gone"
+                layout="@layout/layout_koneksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_komentar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/input_tanggapan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/txt_isi_tanggapan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:background="@drawable/shape_bg_round_edittext"
+            android:hint="Tulis tanggapan anda"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:padding="15dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_kirim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            app:backgroundTint="@color/colorPrimary"
+            app:elevation="0dp"
+            android:src="@drawable/ic_send" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light"
+    android:fillViewport="true"
+    tools:context=".activity.Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Silahakn masuk ke akun anda"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textAllCaps="true"/>
+            <EditText
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_bg_round_edittext"
+                android:padding="15dp"
+                android:id="@+id/txtemail"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"/>
+            <EditText
+                android:background="@drawable/shape_bg_round_edittext"
+                android:padding="15dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/txtpassword"
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content"
+                android:hint="Password"/>
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/btnmasuk"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_gradient_style"
+                android:text="Login"
+                android:textColor="@color/light"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

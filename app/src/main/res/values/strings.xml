@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Si Tani</string>
+    <string name="app_long_name">Sistem Informasi Pertanian</string>
+
+    <string name="koneksi">Ups! Sepertinya ada yang salah nih. Tap di sini untuk memuat ulang. </string>
+    <string name="kosong">Data yang kamu minta belum ada nih. Tap di sini untuk memuat ulang.</string>
+</resources>
